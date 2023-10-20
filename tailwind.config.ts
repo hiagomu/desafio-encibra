@@ -8,12 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primaryColor: '#000',
+        secondaryColor: '#9796A8',
+        secondaryBg: '#D9D9D9',
+        buttonBg: '#5151FA', 
+        buttonBgHover: '#7A7AF0',
+        buttonSaveBg: '#10B910', 
+        buttonSaveBgHover: '#56CD56', 
+        buttonRemoveBg: '#FF4F4F', 
+        buttonRemoveBgHover: '#E85E5E', 
+        sidebarBg: '#343268',
+        sidebarBgSelected: '#48468E',
+        sidebarText: '#6865A7',
+        inputBg: '#F5F5F8',
+        labelText: '#8189A6'
       },
-    },
+      boxShadow: {
+        'primary': '0px 5px 15px rgba(0, 0, 0, 0.2)',
+      },
+    }
   },
   plugins: [],
 }
