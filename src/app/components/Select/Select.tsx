@@ -1,16 +1,5 @@
+import { SelectProps } from "@/app/@types"
 import { Field } from "formik"
-import { SelectHTMLAttributes } from "react"
-import { FaTrash as RemoveIcon } from "react-icons/fa"
-
-interface SelectProps extends SelectHTMLAttributes<HTMLInputElement> {
-    isLoading: boolean
-    label: string
-    options: {
-        name: string | number
-        value: string | number
-    }[]
-    hasDeleteOption?: boolean
-}
 
 export const Select = ({
     id,
