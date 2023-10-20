@@ -1,0 +1,248 @@
+{
+    "contributors": [
+        {
+            "id": 1,
+            "name": "Hiago Castro",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen1139b1e36e4b431d81f07a83e3e8428b.jpg",
+            "age": 27,
+            "main_role": "Desenvolvedor Fullstack",
+            "roles": [
+                "front-end",
+                "back-end"
+            ],
+            "start_date": "18/10/2017",
+            "contract_type": "CLT",
+            "is_admin": false
+        },
+        {
+            "id": 2,
+            "name": "Rafael Silva",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen87e098e4f5f051f47ea8aec10e210a61.jpg",
+            "age": 27,
+            "main_role": "Desenvolvedor Back-end",
+            "roles": [
+                "front-end",
+                "back-end",
+                "designer"
+            ],
+            "start_date": "07/03/2018",
+            "contract_type": "CLT",
+            "is_admin": false
+        },
+        {
+            "id": 3,
+            "name": "Victor Andrade",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen9885331ba3cbac4b46bd7cff5103e8d1.jpg",
+            "age": 34,
+            "main_role": "Infraestrutura",
+            "roles": [
+                "infra"
+            ],
+            "start_date": "13/06/2018",
+            "contract_type": "PJ",
+            "is_admin": false
+        },
+        {
+            "id": 4,
+            "name": "Lucas Machado",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen112328e782a341589923954dfe4af029.jpg",
+            "age": 25,
+            "main_role": "Desenvolvedor Front-end",
+            "roles": [
+                "front-end",
+                "designer"
+            ],
+            "start_date": "18/10/2019",
+            "contract_type": "CLT",
+            "is_admin": false
+        },
+        {
+            "id": 5,
+            "name": "Amélia Santos",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen8710d8fd00a0a7cbe9f061e2bc83af68.jpg",
+            "age": 32,
+            "main_role": "Gestão",
+            "roles": [
+                "gestor",
+                "reqs"
+            ],
+            "start_date": "01/04/2020",
+            "contract_type": "PJ",
+            "is_admin": true
+        },
+        {
+            "id": 6,
+            "name": "Gabriel Rocha",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen1177bcc4edf29047d6d13e23a4ed6c38.jpg",
+            "age": 24,
+            "main_role": "Designer",
+            "roles": [
+                "designer",
+                "gestor"
+            ],
+            "start_date": "18/08/2020",
+            "contract_type": "PJ",
+            "is_admin": true
+        },
+        {
+            "id": 7,
+            "name": "Luana Grello",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen9e6fa4d3a7f673847682c2eb9371e34e.jpg",
+            "age": 27,
+            "main_role": "Desenvolvedor Back-end",
+            "roles": [
+                "back-end",
+                "infra"
+            ],
+            "start_date": "25/03/2021",
+            "contract_type": "CLT",
+            "is_admin": false
+        },
+        {
+            "id": 8,
+            "name": "Manuel Macedo",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen11354d9391bfae329b4992d9b751393f.jpg",
+            "age": 38,
+            "main_role": "Requisitos",
+            "roles": [
+                "reqs"
+            ],
+            "start_date": "15/08/2021",
+            "contract_type": "CLT",
+            "is_admin": false
+        },
+        {
+            "id": 9,
+            "name": "Sérgio Gomez",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen31a2584416f29754402529ad973e2962.jpg",
+            "age": 29,
+            "main_role": "Desenvolvedor Front-end",
+            "roles": [
+                "front-end"
+            ],
+            "start_date": "15/03/2022",
+            "contract_type": "CLT",
+            "is_admin": false
+        },
+        {
+            "id": 10,
+            "name": "Aline Barros",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen111f0b9fa95a8dbdef30831f6fbd5ab8.jpg",
+            "age": 40,
+            "main_role": "Desenvolvedor Back-end",
+            "roles": [
+                "back-end",
+                "infra",
+                "gestor"
+            ],
+            "start_date": "17/05/2022",
+            "contract_type": "PJ",
+            "is_admin": false
+        },
+        {
+            "id": 11,
+            "name": "Lucas Almeida",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-gen58e4f628577d14c2e7d062692fc0a8ee.jpg",
+            "age": 28,
+            "main_role": "Designer",
+            "roles": [
+                "designer",
+                "infra"
+            ],
+            "start_date": "15/05/2023",
+            "contract_type": "PJ",
+            "is_admin": false
+        },
+        {
+            "id": 12,
+            "name": "Jessica Cardoso",
+            "profile_picture": "https://this-person-does-not-exist.com/img/avatar-genff6de5ef4b782e3f989699df23746f3d.jpg",
+            "age": 27,
+            "main_role": "Desenvolvedor Back-end",
+            "roles": [
+                "back-end",
+                "front-end",
+                "reqs"
+            ],
+            "start_date": "17/05/2022",
+            "contract_type": "CLT",
+            "is_admin": false
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "name": "Vulc",
+            "platforms": [
+                "web",
+                "mobile"
+            ],
+            "project_picture": "https://i.imgur.com/jnQt13j.jpg",
+            "status": "in progress",
+            "deadline": "23/02/2024",
+            "start_date": "17/10/2023",
+            "end_date": "",
+            "description": "Projeto voltado ao monitoramento de vulcões",
+            "techs": [
+                "next",
+                "figma"
+            ],
+            "contributorsId": [1, 2, 6, 10, 11, 12]
+        },
+        {
+            "id": 2,
+            "name": "GreenScape",
+            "platforms": [
+                "web",
+                "mobile"
+            ],
+            "project_picture": "https://i.imgur.com/CRNKN8Y.jpg",
+            "status": "in progress",
+            "deadline": "10/12/2024",
+            "start_date": "25/08/2023",
+            "end_date": "",
+            "description": "Plataforma para incentivo ao plantio de árvores",
+            "techs": [
+                "angular",
+                "figma"
+            ],
+            "contributorsId": [2, 3, 4, 7, 8, 9]
+        },
+        {
+            "id": 3,
+            "name": "RoboAssist",
+            "platforms": [
+                "mobile"
+            ],
+            "project_picture": "https://i.imgur.com/bhjNwyc.jpg",
+            "status": "in progress",
+            "deadline": "28/11/2023",
+            "start_date": "10/02/2022",
+            "end_date": "",
+            "description": "Assistente virtual baseado em inteligência artificial",
+            "techs": [
+                "flutter",
+                "dialogflow"
+            ],
+            "contributorsId": [1, 3, 5, 10, 11, 12]
+        },
+        {
+            "id": 4,
+            "name": "HealthHub",
+            "platforms": [
+                "web"
+            ],
+            "project_picture": "https://i.imgur.com/nIgahBB.jpg",
+            "status": "in progress",
+            "deadline": "05/12/2023",
+            "start_date": "20/05/2023",
+            "end_date": "",
+            "description": "Plataforma de monitoramento de saúde pessoal",
+            "techs": [
+                "react",
+                "sketch"
+            ],
+            "contributorsId": [2, 4, 6, 7, 8, 12]
+        }
+    ]
+}
