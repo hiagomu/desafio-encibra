@@ -11,6 +11,11 @@ export interface ContributorProps {
     alocated_projects: number[]
 }
 
+export interface ContributorCardProps extends ContributorProps {
+    setMemberId: (memberId: number) => void
+    setIsMoveMemberModalOpen: (isMoveMemberModalOpen: boolean) => void
+}
+
 export interface ProjectProps {
     id: number
     name: string
@@ -23,6 +28,14 @@ export interface ProjectProps {
     description: string,
     techs: string[],
     contributorsId: number[]
+}
+
+export interface ProjectItemProps extends Pick<ProjectProps, "project_picture" | "name" | "status"> {
+    addToProject: () => void
+}
+
+export interface ProjectCardProps extends ProjectProps {
+    setIsMoveMemberModalOpen: (isMoveMemberModalOpen: boolean) => void
 }
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLInputElement> {
