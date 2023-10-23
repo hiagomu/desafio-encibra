@@ -39,7 +39,9 @@ export const ContributorDetails = ({
     )
 
     return (
-        <div className="w-[24rem] max-h-[49rem] shadow-primary bg-white rounded-lg flex flex-col items-center py-5 max-md:w-[20rem]">
+        <div className="w-[24rem] max-h-[49rem] shadow-primary bg-white
+            rounded-lg flex flex-col items-center py-5 max-md:w-[20rem]"
+        >
             <EditUserModal
                 onClose={() => setIsNewMemberModalOpen(false)}
                 isOpen={isNewMemberModalOpen}
