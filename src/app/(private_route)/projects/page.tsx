@@ -1,17 +1,17 @@
 "use client"
 
 import { useState } from 'react'
-import { ProjectCard } from '../components/ProjectCard'
-import { api } from '../../../services/api'
-import { AddToProjectProps, ContributorProps, ProjectProps } from '../@types'
-import { Button } from '../components/Button'
-import { Search } from '../components/Search'
-import { NewProjectModal } from '../components/NewProjectModal'
-import { MoveProjectModal } from '../components/MoveProjectModal'
+import { ProjectCard } from '@/app/components/ProjectCard'
+import { api } from '../../../../services/api'
+import { Button } from '@/app/components/Button'
+import { Search } from '@/app/components/Search'
+import { NewProjectModal } from '@/app/components/NewProjectModal'
+import { MoveProjectModal } from '@/app/components/MoveProjectModal'
 import { useMutation, useQuery, useQueryClient } from 'react-query'
-import { useSession } from 'next-auth/react'
-import { Sidebar } from '../components/Sidebar'
-import { Header } from '../components/Header'
+import { Sidebar } from '@/app/components/Sidebar'
+import { Header } from '@/app/components/Header'
+import { checkRole } from '@/app/utils/checkRole'
+import { AddToProjectProps, ContributorProps, ProjectProps } from '@/app/@types'
 
 export default function Projects() {
   const [isNewProjectModalOpen, setIsNewProjectModalOpen] = useState(false)
@@ -19,8 +19,7 @@ export default function Projects() {
   const [search, setSearch] = useState("")
   const [projectId, setProjectId] = useState<number>()
   const queryClient = useQueryClient()
-  const session = useSession()
-  const isAdmin = session.data?.user.user.roles.includes("gestor")
+  const isAdmin = checkRole()
 
   const { data: users } = useQuery<ContributorProps[]>(
     ["usersProjects"],

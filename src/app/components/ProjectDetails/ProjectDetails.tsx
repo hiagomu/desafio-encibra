@@ -3,15 +3,15 @@
 import Image from "next/image"
 import React, { useState } from "react"
 import { Button } from "../Button"
-import { ContributorProps, ProjectProps } from "@/app/@types"
 import { FieldInfo } from "../FieldInfo/FieldInfo"
 import { NewProjectModal } from "../NewProjectModal"
 import { formatDatePattern } from "@/app/utils/formatDatePattern"
 import { api } from "../../../../services/api"
 import { useRouter } from "next/navigation"
 import { useMutation, useQuery } from "react-query"
-import { useSession } from "next-auth/react"
 import { Status } from "../Status"
+import { checkRole } from "@/app/utils/checkRole"
+import { ContributorProps, ProjectProps } from "@/app/@types"
 
 interface ProjectDetailsProps extends ProjectProps {
     members?: ContributorProps[]
@@ -33,8 +33,7 @@ export const ProjectDetails = ({
 } : ProjectDetailsProps) => {
     const router = useRouter()
     const [isNewProjectModalOpen, setIsNewProjectModalOpen] = useState(false)
-    const session = useSession()
-    const isAdmin = session.data?.user.user.roles.includes("gestor")
+    const isAdmin = checkRole()
 
     const { data: allUsers } = useQuery<ContributorProps[]>(
         ["allUsers"],

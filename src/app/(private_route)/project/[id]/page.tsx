@@ -4,12 +4,12 @@ import { InfoCard } from '@/app/components/InfoCard'
 import { Search } from '@/app/components/Search'
 import { useParams } from 'next/navigation'
 import { useState } from 'react'
-import { api } from '../../../../services/api'
-import { ContributorProps, ProjectProps } from '@/app/@types'
+import { api } from '../../../../../services/api'
 import { ProjectDetails } from '@/app/components/ProjectDetails'
 import { useQuery } from 'react-query'
 import { Sidebar } from '@/app/components/Sidebar'
 import { Header } from '@/app/components/Header'
+import { ContributorProps, ProjectProps } from '@/app/@types'
 
 export default function Project() {
   const { id } = useParams()
@@ -43,8 +43,8 @@ export default function Project() {
                 {
                   project && users &&
                   <ProjectDetails
-                    members={users}
                     id={project.id}
+                    members={users}
                     name={project.name}
                     techs={project.techs}
                     status={project.status}
@@ -59,7 +59,7 @@ export default function Project() {
                 <div className='flex flex-col items-center'>
                   <Search setSearch={setSearch} title="membro"/>
                   <h2 className='text-secondaryColor font-bold text-xl mb-3'>{filteredContributors?.length} Membro(s)</h2>
-                  <div className='flex flex-col w-fit overflow-auto max-h-[32.5rem] gap-y-5 max-lg:mb-32'>
+                  <div className='flex flex-col w-fit overflow-auto max-h-[32rem] gap-y-5 max-lg:mb-32'>
                     {
                       filteredContributors?.length ?
                         filteredContributors?.map(contributor =>

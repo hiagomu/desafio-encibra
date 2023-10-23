@@ -10,8 +10,8 @@ import { api } from "../../../../services/api"
 import { useRouter } from "next/navigation"
 import { useMutation } from "react-query"
 import { EditUserModal } from "../EditUserModal"
-import { useSession } from "next-auth/react"
 import { calcAge } from "@/app/utils/calcAge"
+import { checkRole } from "@/app/utils/checkRole"
 
 export const ContributorDetails = ({
     id,
@@ -26,8 +26,7 @@ export const ContributorDetails = ({
 } : ContributorProps) => {
     const [isNewMemberModalOpen, setIsNewMemberModalOpen] = useState(false)
     const router = useRouter()
-    const session = useSession()
-    const isAdmin = session.data?.user.user.roles.includes("gestor")
+    const isAdmin = checkRole()
 
     const { mutate: deleteMember, isLoading: isRemovingMember } = useMutation(
         async () => {

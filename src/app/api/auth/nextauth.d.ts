@@ -1,4 +1,4 @@
-import { ContributorProps } from '@/app/@types';
+import { ContributorProps } from '@/@types';
 import NextAuth from 'next-auth';
 
 declare module 'next-auth' {

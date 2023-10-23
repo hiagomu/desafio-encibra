@@ -1,7 +1,7 @@
-import { ContributorLoginProps, ContributorProps } from "@/app/@types"
-import { prisma } from "../../../../prisma/client"
+import { prisma } from "../../../../prisma/client";
 import { NextResponse } from "next/server";
 import { hash } from "bcrypt"
+import { ContributorLoginProps, ContributorProps } from "@/app/@types";
 
 export async function POST(req: Request) {
     try {

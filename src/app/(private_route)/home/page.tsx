@@ -1,14 +1,14 @@
 "use client"
 
 import { useState } from 'react'
-import { InfoCard } from '../components/InfoCard'
-import { api } from '../../../services/api'
-import { AddToProjectProps, ContributorProps, ProjectProps } from '../@types'
-import { MoveMemberModal } from '../components/MoveMemberModal'
-import { Search } from '../components/Search'
+import { InfoCard } from '@/app/components/InfoCard'
+import { api } from '../../../../services/api'
+import { MoveMemberModal } from '@/app/components/MoveMemberModal'
+import { Search } from '@/app/components/Search'
 import { useMutation, useQuery, useQueryClient } from 'react-query'
-import { Header } from '../components/Header'
-import { Sidebar } from '../components/Sidebar'
+import { Header } from '@/app/components/Header'
+import { Sidebar } from '@/app/components/Sidebar'
+import { AddToProjectProps, ContributorProps, ProjectProps } from '@/app/@types'
 
 export default function Home() {
   const [isMoveMemberModalOpen, setIsMoveMemberModalOpen] = useState(false)

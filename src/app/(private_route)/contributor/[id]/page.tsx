@@ -5,11 +5,11 @@ import { ContributorDetails } from '@/app/components/ContributorDetails'
 import { useParams } from 'next/navigation'
 import { useState } from 'react'
 import { ProjectCard } from '@/app/components/ProjectCard'
-import { api } from '../../../../services/api'
-import { ContributorProps, ProjectProps } from '@/app/@types'
+import { api } from '../../../../../services/api'
 import { useQuery } from 'react-query'
 import { Header } from '@/app/components/Header'
 import { Sidebar } from '@/app/components/Sidebar'
+import { ContributorProps, ProjectProps } from '@/app/@types'
 
 export default function Contributor() {
   const { id } = useParams()

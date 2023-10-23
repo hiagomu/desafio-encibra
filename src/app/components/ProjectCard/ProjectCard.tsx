@@ -1,11 +1,11 @@
 import Image from "next/image"
 import { Button } from "../Button"
 import { useRouter } from "next/navigation"
-import { ProjectCardProps, RemoveOfProjectProps } from "@/app/@types"
 import { formatDatePattern } from "@/app/utils/formatDatePattern"
 import { api } from "../../../../services/api"
 import { useMutation, useQueryClient } from "react-query"
-import { useSession } from "next-auth/react"
+import { checkRole } from "@/app/utils/checkRole"
+import { ProjectCardProps, RemoveOfProjectProps } from "@/app/@types"
 
 export const ProjectCard = ({
     id,
@@ -19,8 +19,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
     const router = useRouter()
     const queryClient = useQueryClient()
-    const session = useSession()
-    const isAdmin = session.data?.user.user.roles.includes("gestor")
+    const isAdmin = checkRole()
 
     const { mutate: removeMember } = useMutation(
         async (props: RemoveOfProjectProps) => {
