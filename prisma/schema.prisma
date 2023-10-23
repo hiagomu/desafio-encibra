@@ -29,7 +29,6 @@ model Project {
   name           String        @db.VarChar(255)
   techs          String[]
   status         String        @default("in progress")
-  endDate        DateTime?
   deadline       DateTime
   startDate      DateTime      @default(now())
   platforms      String[]

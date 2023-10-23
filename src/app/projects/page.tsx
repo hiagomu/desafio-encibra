@@ -108,7 +108,6 @@ export default function Projects() {
                     techs={project.techs}
                     status={project.status}
                     deadline={project.deadline}
-                    endDate={project.endDate}
                     platforms={project.platforms}
                     startDate={project.startDate}
                     description={project.description}

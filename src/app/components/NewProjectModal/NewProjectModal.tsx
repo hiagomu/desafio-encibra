@@ -45,7 +45,6 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
         techs: project.techs,
         status: project.status,
         deadline: formatDate(project.deadline),
-        endDate: formatDate(project.endDate),
         startDate: formatDate(project.startDate),
         platforms: project.platforms,
         description: project.description,
@@ -55,7 +54,6 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
         techs: [""],
         status: "in progress",
         deadline: new Date,
-        endDate: new Date,
         startDate: new Date,
         platforms: ["web"],
         description: "",
@@ -73,7 +71,6 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                     users: project.users,
                     techs: project.techs,
                     status: project.status,
-                    endDate: project.endDate,
                     deadline: project.deadline,
                     platforms: project.platforms,
                     startDate: project.startDate,
@@ -98,7 +95,6 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                     name: projectInfo.name,
                     techs: projectInfo.techs,
                     status: projectInfo.status,
-                    endDate: projectInfo.endDate,
                     deadline: projectInfo.deadline,
                     platforms: projectInfo.platforms,
                     startDate: projectInfo.startDate,
@@ -153,7 +149,6 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                                 name: formValues.name,
                                 status: formValues.status,
                                 techs: formValues.techs,
-                                endDate: formValues.endDate,
                                 deadline: formValues.deadline,
                                 startDate: formValues.startDate,
                                 description: formValues.description,
@@ -171,7 +166,6 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                                 name: formValues.name,
                                 status: formValues.status,
                                 techs: formValues.techs,
-                                endDate: new Date(formValues.endDate),
                                 deadline: new Date(formValues.deadline),
                                 startDate: new Date(formValues.startDate),
                                 description: formValues.description,
@@ -226,20 +220,14 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                                         label="Data de ínicio"
                                         isLoading={isSubmitting || isCreatingProject || isUpdatingProject}
                                     />
-                                    <Input
-                                        id="endDate"
-                                        type="date"
-                                        label="Entrega"
-                                        isLoading={isSubmitting || isCreatingProject || isUpdatingProject}
-                                    />
-                                </div>
-                                <div>
                                     <Select
                                         id="status"
                                         label="Status"
                                         options={status}
                                         isLoading={isSubmitting || isCreatingProject || isUpdatingProject}
                                     />
+                                </div>
+                                <div>
                                     {
                                         project && membersOptions ?
                                         null

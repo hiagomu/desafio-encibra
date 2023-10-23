@@ -34,7 +34,6 @@ export interface ProjectProps {
     projectPicture: string
     status: string,
     startDate: Date
-    endDate: Date
     deadline: Date
     description: string,
     techs: string[],
