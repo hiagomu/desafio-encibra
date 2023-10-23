@@ -24,7 +24,7 @@ export const Button = (
             type={type}
             className={`
                 flex justify-center gap-2 items-center text-white py-2
-                px-5 font-bold text-sm rounded-lg max-sm:text-sm
+                px-5 font-bold text-sm rounded-lg max-md:text-xs
                 ${disabled ?
                     "bg-secondaryColor"
                     : remove ?
