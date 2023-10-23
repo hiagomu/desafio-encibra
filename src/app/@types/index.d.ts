@@ -49,6 +49,11 @@ export interface ProjectItemProps extends Pick<ProjectProps, "projectPicture" | 
     isLoading: boolean
 }
 
+export interface LoginProps {
+    email: string
+    password: string
+}
+
 export interface ProjectCardProps extends ProjectProps {
     setIsMoveProjectModalOpen?: (isMoveProjectModalOpen: boolean) => void
     setProjectId?: (projectId) => void
