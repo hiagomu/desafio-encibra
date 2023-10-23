@@ -99,9 +99,9 @@ export const InfoCard = ({
                             remove
                         />
                     }
-                    <Button fn={() => router.push(`/contributor/${id}`)} title="Mais detalhes" type="button" />
                 </div>
             }
+            <Button fn={() => router.push(`/contributor/${id}`)} title="Mais detalhes" type="button" />
         </div>
     )
 }

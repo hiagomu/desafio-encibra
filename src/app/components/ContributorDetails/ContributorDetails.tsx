@@ -68,12 +68,19 @@ export const ContributorDetails = ({
             <FieldInfo title="Nome completo" value={name} />
             <FieldInfo title="Data de nascimento" value={formatDatePattern(new Date(birthDate))} />
             <FieldInfo title="Data de ínicio" value={formatDatePattern(new Date(startDate))} />
-            <FieldInfo title="Regime de contratação" value={contractType} />
+            { isAdmin && <FieldInfo title="Regime de contratação" value={contractType} />}
             <FieldInfo title="Idade" value={calcAge(new Date(birthDate))} />
             <div className="w-[17rem] h-10 mb-4">
                 <h3 className="text-labelText font-bold mb-1">Funções</h3>
                 <div className="flex gap-2">
-                    {roles.map((role, index) => <div className="rounded-lg text-secondaryColor border border-secondaryColor px-2 py-0.5 font-bold bg-secondaryBg text-sm" key={index}>{role}</div>)}
+                    {roles.map((role, index) =>
+                        <div
+                            className="rounded-lg text-secondaryColor border border-secondaryColor px-2 py-0.5 font-bold bg-secondaryBg text-sm"
+                            key={index}
+                        >
+                            {role}
+                        </div>
+                    )}
                 </div>
             </div>
             {
