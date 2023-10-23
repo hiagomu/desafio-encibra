@@ -1,41 +1,58 @@
+import { Dispatch, SetStateAction } from "react"
+
 export interface ContributorProps {
     id: number
+    email: string
     name: string
-    profile_picture: string
-    age: number,
-    main_role: string,
+    profilePicture: string
+    birthDate: Date,
+    mainRole: string,
     roles: string[],
-    start_date: Date
-    contract_type: "CLT" | "PJ"
-    is_admin: boolean
-    alocated_projects: number[]
+    startDate: Date
+    contractType: string
 }
 
+export interface ContributorLoginProps extends ContributorProps{
+    password: string
+}
 export interface ContributorCardProps extends ContributorProps {
-    setMemberId: (memberId: number) => void
-    setIsMoveMemberModalOpen: (isMoveMemberModalOpen: boolean) => void
+    project?: ProjectProps
+    setUpdateMembers?: Dispatch<SetStateAction<boolean>>
+    setMemberId?: (memberId: number) => void
+    setIsMoveMemberModalOpen?: (isMoveMemberModalOpen: boolean) => void
+}
+
+export interface ContributorItemProps extends Pick<ContributorProps, "profilePicture" | "name" | "mainRole"> {
+    addToProject: () => void
+    isLoading: boolean
 }
 
 export interface ProjectProps {
     id: number
     name: string
     platforms: string[]
-    project_picture: string
+    projectPicture: string
     status: string,
-    start_date: Date
-    end_date: Date
+    startDate: Date
+    endDate: Date
     deadline: Date
     description: string,
     techs: string[],
     contributorsId: number[]
+    users?: {
+        userId: number
+    }[]
 }
 
-export interface ProjectItemProps extends Pick<ProjectProps, "project_picture" | "name" | "status"> {
+export interface ProjectItemProps extends Pick<ProjectProps, "projectPicture" | "name" | "status"> {
     addToProject: () => void
+    isLoading: boolean
 }
 
 export interface ProjectCardProps extends ProjectProps {
-    setIsMoveMemberModalOpen: (isMoveMemberModalOpen: boolean) => void
+    setIsMoveProjectModalOpen?: (isMoveProjectModalOpen: boolean) => void
+    setProjectId?: (projectId) => void
+    memberId?: number
 }
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLInputElement> {
@@ -47,4 +64,14 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLInputElement> {
         value: string | number
     }[]
     hasDeleteOption?: boolean
+}
+
+export interface AddToProjectProps {
+    projectId: number
+    userId: number
+}
+
+export interface RemoveOfProjectProps {
+    projectId: number
+    userId: number
 }
