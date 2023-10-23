@@ -38,7 +38,10 @@ export const ProjectCard = ({
     )
 
     return (
-        <div className="bg-white px-6 py-5 rounded-xl shadow-primary w-[25rem] min-h-[11rem] h-fit max-md:w-[20rem] max-md:py-3 max-md:px-4">
+        <div className={`bg-white px-6 py-5 rounded-xl shadow-primary w-[25rem]
+            ${isAdmin ? "min-h-[13.5rem] max-md:min-h-[11rem]" : "min-h-[11rem]"}
+            h-fit max-md:w-[20rem] max-md:py-3 max-md:px-4`}
+        >
             <div className="flex gap-5 justify-start items-center mb-1">
                 <Image
                     alt="Imagem de perfil"

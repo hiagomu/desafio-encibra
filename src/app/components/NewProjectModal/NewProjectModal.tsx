@@ -89,25 +89,23 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
 
     const { mutate: updateProject, isLoading: isUpdatingProject } = useMutation(
         async (projectInfo: Partial<ProjectProps>) => {
-            try {
-                await api.put("/api/projects", {
-                    id: project?.id,
-                    name: projectInfo.name,
-                    techs: projectInfo.techs,
-                    status: projectInfo.status,
-                    deadline: projectInfo.deadline,
-                    platforms: projectInfo.platforms,
-                    startDate: projectInfo.startDate,
-                    description: projectInfo.description,
-                    projectPicture: projectInfo.projectPicture
-                })
-            } catch(err) {
-                console.log(err)
-            }
+            await api.put("/api/projects", {
+                id: project?.id,
+                name: projectInfo.name,
+                techs: projectInfo.techs,
+                status: projectInfo.status,
+                deadline: projectInfo.deadline,
+                platforms: projectInfo.platforms,
+                startDate: projectInfo.startDate,
+                description: projectInfo.description,
+                projectPicture: projectInfo.projectPicture
+            })
+                
             onClose()
         },
         {
-            onSuccess: () => queryClient.invalidateQueries("projectsDetails")
+            onSuccess: () => queryClient.invalidateQueries("projectDetails"),
+            onError: (err) => console.log(err)
         }
     )
 
