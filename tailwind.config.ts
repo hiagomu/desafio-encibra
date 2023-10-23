@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         primaryColor: '#000',
         secondaryColor: '#9796A8',
+        buttonExitBg: 'rgba(0, 0, 0, 0.3)',
+        buttonExitBgHover: 'rgba(0, 0, 0, 0.2)',
+        dropdownButtonBg: 'rgba(0, 0, 0, 0.1)',
+        dropdownButtonBgHover: 'rgba(0, 0, 0, 0.3)',
         secondaryBg: '#D9D9D9',
         buttonBg: '#5151FA', 
         buttonBgHover: '#7A7AF0',

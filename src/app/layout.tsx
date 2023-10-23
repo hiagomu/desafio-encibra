@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Mulish } from 'next/font/google'
 import './globals.css'
-import { Sidebar } from './components/Sidebar'
-import { Header } from './components/Header'
+import QueryWrapper from './components/QueryWrapper/QueryWrapper'
+import SessionWrapper from './components/SessionWrapper/SessionWrapper'
 
 const mulish = Mulish({ subsets: ['latin'] })
 
@@ -16,14 +16,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="pt-BR">
       <body className={`${mulish.className} h-screen overflow-hidden`}>
-        <Header />
-        <div className='flex h-full'>
-          <Sidebar />
-          {children}
-        </div>
+        <SessionWrapper>
+          <QueryWrapper>
+            {children}
+          </QueryWrapper>
+        </SessionWrapper>
       </body>
     </html>
   )
