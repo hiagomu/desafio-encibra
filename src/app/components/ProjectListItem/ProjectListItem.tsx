@@ -1,6 +1,7 @@
-import { ProjectItemProps } from "@/app/@types"
 import Image from "next/image"
 import { Button } from "../Button"
+import { Status } from "../Status"
+import { ProjectItemProps } from "@/app/@types"
 
 export const ProjectListItem = ({ projectPicture, name, status, addToProject, isLoading }: ProjectItemProps) => {
     return (
@@ -12,9 +13,9 @@ export const ProjectListItem = ({ projectPicture, name, status, addToProject, is
                 height={48}
                 className="rounded max-md:h-8 max-md-w-8"
             />
-            <div className="w-full">
+            <div className="w-full flex flex-col">
                 <span className="text-primaryColor font-bold max-md:text-sm">{name}</span>
-                <p className="text-secondaryColor font-semibold text-sm max-md:text-xs">{status}</p>
+                <Status status={status} />
             </div>
             <Button
                 type="button"

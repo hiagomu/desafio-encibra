@@ -288,8 +288,8 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                                                 <button
                                                     type="button"
                                                     disabled={isSubmitting || isCreatingProject || isUpdatingProject}
-                                                    onClick={() => push("")}
-                                                    title="Adicionar função"
+                                                    onClick={() => push("web")}
+                                                    title="Adicionar plataforma"
                                                     className="absolute top-0 ml-[6.25rem] h-5 w-5 mt-0.5 bg-buttonBg rounded-full flex justify-center items-center hover:opacity-50"
                                                 >
                                                     <AddIcon className="w-3 h-3 text-white" />
@@ -331,7 +331,7 @@ export const NewProjectModal = ({ isOpen, onClose, members, project, allUsers }:
                                                 <button
                                                     type="button"
                                                     onClick={() => push("")}
-                                                    title="Adicionar função"
+                                                    title="Adicionar tecnologia"
                                                     disabled={isSubmitting || isCreatingProject || isUpdatingProject}
                                                     className="absolute top-0 ml-[6rem] h-5 w-5 mt-0.5 bg-buttonBg rounded-full flex justify-center items-center hover:opacity-50"
                                                 >

@@ -1,14 +1,14 @@
-import { AddToProjectProps, ContributorProps, ProjectProps } from '@/app/@types';
 import Modal from 'react-modal'
 import { Search } from '../Search';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import { FaTimes as ExitIcon } from "react-icons/fa"
 import { MemberListItem } from '../MemberListItem';
+import { AddToProjectProps, ContributorProps, ProjectProps } from '@/app/@types';
 
 interface DialogProps {
   project: ProjectProps
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
   addToProject: (props: AddToProjectProps) => void
   members: ContributorProps[]
   isLoading: boolean

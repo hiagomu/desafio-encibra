@@ -17,7 +17,6 @@ import { ContributorProps } from '@/app/@types';
 import { formatDate } from '@/app/utils/formatDate';
 import { useMutation, useQueryClient } from 'react-query';
 import { validationSchema } from './structure';
-import { validationSchemaOnCreate, validationSchemaOnEdit } from '../NewProjectModal/structure';
 
 interface EditUserModalProps {
   isOpen: boolean;
@@ -84,7 +83,7 @@ export const EditUserModal = ({ isOpen, onClose, member }: EditUserModalProps) =
                     background: 'none',
                     minWidth: '320px',
                     width: '320px',
-                    height: '900px',
+                    height: '1000px',
                     minHeight: '480px',
                     margin: '0 auto',
                     top: '50%',
@@ -95,7 +94,7 @@ export const EditUserModal = ({ isOpen, onClose, member }: EditUserModalProps) =
             <div
                 className='flex flex-col w-[26.5rem] h-[900px] items-center
                     justify-center p-3 absolute
-                    top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-auto
+                    top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
                     max-md:w-[20rem]'
             >
                 <Formik
@@ -119,7 +118,7 @@ export const EditUserModal = ({ isOpen, onClose, member }: EditUserModalProps) =
                         startDate: new Date(formValues.startDate),
                         contractType: formValues.contractType,
                     })}
-                    validationSchema={member ? validationSchemaOnEdit : validationSchemaOnCreate}
+                    validationSchema={validationSchema}
                     enableReinitialize
                 >
                     {({ isSubmitting, values }) => (

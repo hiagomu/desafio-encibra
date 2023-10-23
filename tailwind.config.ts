@@ -24,7 +24,7 @@ const config: Config = {
         buttonRemoveBgHover: '#E85E5E', 
         inProgressColor: '#10B910', 
         finishedColor: '#FF4F4F', 
-        waitingColor: '#FBF564',
+        waitingColor: '#E5DF4D',
         sidebarBg: '#343268',
         sidebarBgSelected: '#48468E',
         sidebarText: '#6865A7',

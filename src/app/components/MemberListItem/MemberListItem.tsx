@@ -1,6 +1,6 @@
-import { ContributorItemProps } from "@/app/@types"
 import Image from "next/image"
 import { Button } from "../Button"
+import { ContributorItemProps } from "@/app/@types"
 
 export const MemberListItem = ({ profilePicture, name, mainRole, addToProject, isLoading }: ContributorItemProps) => {
     return (

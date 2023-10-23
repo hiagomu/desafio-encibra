@@ -1,9 +1,9 @@
-import { AddToProjectProps, ProjectProps } from '@/app/@types';
 import Modal from 'react-modal'
 import { ProjectListItem } from '../ProjectListItem';
 import { Search } from '../Search';
 import { useState } from 'react';
 import { FaTimes as ExitIcon } from "react-icons/fa"
+import { AddToProjectProps, ProjectProps } from '@/app/@types';
 
 interface DialogProps {
   isOpen: boolean;

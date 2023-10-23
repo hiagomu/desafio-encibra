@@ -3,20 +3,20 @@
 import { FieldArray, Form, Formik } from "formik";
 import { useRouter } from "next/navigation";
 import { useMutation } from "react-query";
-import { ContributorLoginProps } from "../@types";
+import { ContributorLoginProps } from "@/app/@types";
 import { api } from "../../../services/api";
 import Image from "next/image";
-import { isLink } from "../utils/isLink";
-import { Input } from "../components/Input";
-import { Select } from "../components/Select";
-import { contracts, roles } from "../components/ContributorDetails/structure";
+import { isLink } from "@/app/utils/isLink";
+import { Input } from "@/app/components/Input";
+import { Select } from "@/app/components/Select";
 import defaultImage from "../../../public/default_profile_image.png"
-import { Button } from "../components/Button";
+import { Button } from "@/app/components/Button";
 import {
     FaPlus as AddIcon,
     FaTrash as RemoveIcon,
 } from "react-icons/fa"
 import { initialValues, validationSchema } from "./structure";
+import { contracts, roles } from "@/app/components/ContributorDetails/structure";
 
 export default function SignUp() {
     const router = useRouter()
