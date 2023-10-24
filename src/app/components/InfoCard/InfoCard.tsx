@@ -70,11 +70,10 @@ export const InfoCard = ({
                     )}
                 </div>
             </div>
-            {
-                isAdmin &&
                 <div className="flex justify-between">
+                    
                     {
-                        setMemberId && setIsMoveMemberModalOpen &&
+                        isAdmin && setMemberId && setIsMoveMemberModalOpen &&
                         <Button
                             fn={() => {
                                 setMemberId(id)
@@ -85,7 +84,7 @@ export const InfoCard = ({
                         />
                     }
                     {
-                        project &&
+                        isAdmin && project &&
                         <Button
                             fn={() =>
                                 removeOfProject({
@@ -99,9 +98,8 @@ export const InfoCard = ({
                             remove
                         />
                     }
+                    <Button fn={() => router.push(`/contributor/${id}`)} title="Mais detalhes" type="button" />
                 </div>
-            }
-            <Button fn={() => router.push(`/contributor/${id}`)} title="Mais detalhes" type="button" />
         </div>
     )
 }
