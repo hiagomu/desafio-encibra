@@ -10,7 +10,7 @@ import { MoveProjectModal } from '@/app/components/MoveProjectModal'
 import { useMutation, useQuery, useQueryClient } from 'react-query'
 import { Sidebar } from '@/app/components/Sidebar'
 import { Header } from '@/app/components/Header'
-import { checkRole } from '@/app/utils/checkRole'
+import useCheckRole from '@/app/hooks/useCheckRole'
 import { AddToProjectProps, ContributorProps, ProjectProps } from '@/app/@types'
 
 export default function Projects() {
@@ -19,7 +19,7 @@ export default function Projects() {
   const [search, setSearch] = useState("")
   const [projectId, setProjectId] = useState<number>()
   const queryClient = useQueryClient()
-  const isAdmin = checkRole()
+  const isAdmin = useCheckRole()
 
   const { data: users } = useQuery<ContributorProps[]>(
     ["usersProjects"],

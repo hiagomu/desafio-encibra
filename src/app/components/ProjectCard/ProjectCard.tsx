@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import { formatDatePattern } from "@/app/utils/formatDatePattern"
 import { api } from "../../../../services/api"
 import { useMutation, useQueryClient } from "react-query"
-import { checkRole } from "@/app/utils/checkRole"
+import useCheckRole from "@/app/hooks/useCheckRole"
 import { ProjectCardProps, RemoveOfProjectProps } from "@/app/@types"
 
 export const ProjectCard = ({
@@ -19,7 +19,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
     const router = useRouter()
     const queryClient = useQueryClient()
-    const isAdmin = checkRole()
+    const isAdmin = useCheckRole()
 
     const { mutate: removeMember } = useMutation(
         async (props: RemoveOfProjectProps) => {

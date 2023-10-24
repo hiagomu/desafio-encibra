@@ -10,7 +10,7 @@ import { api } from "../../../../services/api"
 import { useRouter } from "next/navigation"
 import { useMutation, useQuery } from "react-query"
 import { Status } from "../Status"
-import { checkRole } from "@/app/utils/checkRole"
+import useCheckRole from "@/app/hooks/useCheckRole"
 import { ContributorProps, ProjectProps } from "@/app/@types"
 
 interface ProjectDetailsProps extends ProjectProps {
@@ -33,7 +33,7 @@ export const ProjectDetails = ({
 } : ProjectDetailsProps) => {
     const router = useRouter()
     const [isNewProjectModalOpen, setIsNewProjectModalOpen] = useState(false)
-    const isAdmin = checkRole()
+    const isAdmin = useCheckRole()
 
     const { data: allUsers } = useQuery<ContributorProps[]>(
         ["allUsers"],
