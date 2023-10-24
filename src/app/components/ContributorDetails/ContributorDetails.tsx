@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation"
 import { useMutation } from "react-query"
 import { EditUserModal } from "../EditUserModal"
 import { calcAge } from "@/app/utils/calcAge"
-import { checkRole } from "@/app/utils/checkRole"
+import useCheckRole from "@/app/hooks/useCheckRole"
 
 export const ContributorDetails = ({
     id,
@@ -26,7 +26,7 @@ export const ContributorDetails = ({
 } : ContributorProps) => {
     const [isNewMemberModalOpen, setIsNewMemberModalOpen] = useState(false)
     const router = useRouter()
-    const isAdmin = checkRole()
+    const isAdmin = useCheckRole()
 
     const { mutate: deleteMember, isLoading: isRemovingMember } = useMutation(
         async () => {

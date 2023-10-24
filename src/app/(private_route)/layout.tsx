@@ -2,10 +2,10 @@
 
 import { ReactNode } from "react";
 import { redirect } from "next/navigation";
-import { isAuthenticated } from "../utils/isAuthenticated";
+import useCheckAuth from "../hooks/useCheckAuth";
 
 export default function PrivateLayout({ children }: { children: ReactNode}) {
-    if (!isAuthenticated()) redirect("/")
+    if (!useCheckAuth()) redirect("/")
 
     return <>{children}</>
 } 

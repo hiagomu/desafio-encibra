@@ -5,7 +5,7 @@ import { roles as rolesData } from "../ContributorDetails/structure"
 import { api } from "../../../../services/api"
 import { formatDatePattern } from "@/app/utils/formatDatePattern"
 import { useMutation, useQueryClient } from "react-query"
-import { checkRole } from "@/app/utils/checkRole"
+import useCheckRole from "@/app/hooks/useCheckRole"
 import { ContributorCardProps, RemoveOfProjectProps } from "@/app/@types"
 
 export const InfoCard = ({
@@ -21,7 +21,7 @@ export const InfoCard = ({
 }: ContributorCardProps) => {
     const router = useRouter()
     const queryClient = useQueryClient()
-    const isAdmin = checkRole()
+    const isAdmin = useCheckRole()
 
     const { mutate: removeOfProject, isLoading: isRemovingProject } = useMutation(
         async (props: RemoveOfProjectProps) => {
